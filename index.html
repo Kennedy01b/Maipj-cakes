@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJ Cakes | Delicious Custom Cakes & Cupcakes</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-cake-candles"></i>
+                <span>PJ Cakes</span>
+            </div>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartToggleBtn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Handcrafted Cakes for Every Celebration</h1>
+            <p>Explore our available designs, pick your favorite, and order directly via WhatsApp!</p>
+            <div class="search-bar-wrapper">
+                <input type="text" id="searchInput" placeholder="Search cakes (e.g., Birthday, Spiderman, Cocomelon)...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Filter -->
+    <section class="container categories-section">
+        <div class="filter-buttons" id="filterButtons">
+            <button class="filter-btn active" data-filter="all">All Cakes</button>
+            <button class="filter-btn" data-filter="birthday">Birthdays</button>
+            <button class="filter-btn" data-filter="kids">Kids & Cartoon</button>
+            <button class="filter-btn" data-filter="football">Football Teams</button>
+            <button class="filter-btn" data-filter="special">Special Occasions</button>
+        </div>
+    </section>
+
+    <!-- Cake Catalog Grid -->
+    <main class="container catalog-section">
+        <div class="cake-grid" id="cakeGrid">
+            <!-- Dynamic Cakes Injected via JS -->
+        </div>
+    </main>
+
+    <!-- Shopping Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2>Your Order Cart</h2>
+            <button class="close-cart" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will appear here -->
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalPrice">$0.00</span>
+            </div>
+            <div class="checkout-form">
+                <h3>Delivery & Contact Details</h3>
+                <input type="text" id="customerName" placeholder="Your Full Name" required>
+                <input type="tel" id="customerPhone" placeholder="Your Phone Number" required>
+                <input type="date" id="deliveryDate" required>
+                <textarea id="customerNotes" placeholder="Any special instructions or message on cake..."></textarea>
+                <button class="whatsapp-checkout-btn" id="whatsappCheckoutBtn">
+                    <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                </button>
+            </div>
+        </div>
+        <div class="cart-empty" id="cartEmpty">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <p>Your cart is empty</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>PJ Cakes</h3>
+                <p><i class="fa-solid fa-phone"></i> +263 77 663 0029</p>
+                <p><i class="fa-solid fa-envelope"></i> nyakubetajuliet@gmail.com</p>
+                <p><i class="fa-brands fa-facebook"></i> Juliet Nyakubeta</p>
+            </div>
+            <p class="copyright">&copy; 2026 PJ Cakes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
